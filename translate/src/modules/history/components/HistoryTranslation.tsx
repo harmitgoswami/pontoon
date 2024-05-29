@@ -215,6 +215,15 @@ export function HistoryTranslationBase({
     }
   }
 
+  const handleDiff = () => {
+    console.log("TAKING MY BREATH AWAY")
+    if(isDiffVisible){
+      return activeTranslation.string
+    }else{
+      return undefined
+    }
+  };
+
   const commentCount = translation.comments?.length ?? 0;
 
   // Does the currently logged in user own this translation?
@@ -431,9 +440,7 @@ export function HistoryTranslationBase({
             >
               <Translation
                 content={translation.string}
-                diffTarget={
-                  isDiffVisible ? activeTranslation.string : undefined
-                }
+                diffTarget={handleDiff()}
                 format={entity.format}
               />
             </p>
