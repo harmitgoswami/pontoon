@@ -1,10 +1,9 @@
 import { Localized } from '@fluent/react';
 import escapeRegExp from 'lodash.escaperegexp';
-import React from 'react';
+import React, { ReactElement } from 'react';
 import { TermState } from '~/modules/terms';
 
 import './Highlight.css';
-import { ReactElement } from 'react';
 
 let keyCounter = 0;
 
@@ -56,7 +55,7 @@ export function Highlight({
   children: string;
   search?: string | null;
   terms?: TermState;
-}) {
+}): Array<string | ReactElement> {
   const source = String(children);
   const marks: Array<{
     index: number;
@@ -207,5 +206,5 @@ export function Highlight({
   if (pos < source.length) {
     res.push(source.slice(pos));
   }
-  return <>{res}</>;
+  return res;
 }
