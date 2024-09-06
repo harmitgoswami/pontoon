@@ -72,10 +72,10 @@ export const SEARCH_OPTIONS = [
     name: 'Search in rejected translations',
     slug: 'search_rejected_translations',
   },
-  // {
-  //   name: 'Match whole words',
-  //   slug: 'matchWords',
-  // },
+  {
+    name: 'Match whole words',
+    slug: 'search_whole_word',
+  },
   // {
   //   name: 'Match case',
   //   slug: 'matchCase',

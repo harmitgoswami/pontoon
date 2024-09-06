@@ -734,6 +734,7 @@ class Entity(DirtyFieldsMixin, models.Model):
         search_identifiers=None,
         search_translations_only=None,
         search_rejected_translations=None,
+        search_whole_word=None,
         time=None,
         author=None,
         review_time=None,

@@ -248,6 +248,7 @@ def entities(request):
         "search_identifiers",
         "search_translations_only",
         "search_rejected_translations",
+        "search_whole_word",
         "time",
         "author",
         "review_time",
